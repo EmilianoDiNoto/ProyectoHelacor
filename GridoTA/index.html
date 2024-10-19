@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,maximum-scale=1"
+    />
+    <title>Modern Admin Dashboard</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <script
+      src="https://kit.fontawesome.com/417062404a.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link
+      rel="stylesheet"
+      href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css"
+    />
+  </head>
+  <body>
+    <input type="checkbox" id="menu-toggle" />
+
+    <div class="sidebar">
+      <div class="side-header">
+        <h3>H<span>ELACOR</span></h3>
+      </div>
+      <div class="side-content">
+        <div class="profile">
+          <div
+            class="profile-img bg-img"
+            style="background-image: url('img/mujer-de-negocios.png')"
+          ></div>
+          <h4>Diana Zavaleta</h4>
+          <small>Administradora</small>
+        </div>
+        <div class="side-menu">
+          <ul>
+            <li>
+              <a href="#" class="active">
+                <span class="las la-home"></span>
+                <small>Inicio</small>
+              </a>
+              <ul class="submenu">
+                <li>
+                  <a href="#">INICIO DE SESION</a>
+                  <ul class="menu">
+                    <li><a href="#">Login Administrativo</a></li>
+                    <li><a href="#">Login general</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">PANEL DE CONTROL</a>
+                  <ul class="submenu">
+                    <li><a href="#">Visión General de Inventario</a></li>
+                    <li><a href="#">Estado de Órdenes de Producción</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">
+                <span class="las la-clipboard-list"></span>
+                <small>Gestion de inventario</small>
+              </a>
+              <ul class="submenu">
+                <li>
+                  <a href="#">VISUALIZACION DE INVENTARIO</a>
+                  <ul class="menu">
+                    <li><a href="#">Inventario por Sección</a></li>
+                    <li><a href="#">Inventario por Lote</a></li>
+                    <li><a href="#">Estado de Materiales e Insumos</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">AJUSTES INVENTARIO</a>
+                  <ul class="menu">
+                    <li><a href="#">Ajustes Positivos</a></li>
+                    <li><a href="#">Ajustes Negativos</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">MOVIMIENTOS DE INVENTARIO</a>
+                  <ul class="menu">
+                    <li><a href="#">Transferencias de Materiales</a></li>
+                    <li>
+                      <a href="#"
+                        >Registro de Movimientos (Origen/Destino, Usuario)</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">DEVOLUCIONES Y DESCARTES</a>
+                  <ul class="menu">
+                    <li><a href="#">Materiales Devueltos</a></li>
+                    <li><a href="#">Materiales Descartados</a></li>
+                    <li><a href="#">Insumos Devueltos</a></li>
+                    <li><a href="#">Insumos Descartados</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">TRAZABILIDAD</a>
+                  <ul class="menu">
+                    <li><a href="#">Historial de Materiales e Insumos</a></li>
+                    <li><a href="#">Grafo de Estructura de Producto</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">
+                <span class="las la-campground"></span>
+                <small>Órdenes de Trabajo</small>
+              </a>
+              <ul class="submenu">
+                <li>
+                  <a href="#">GESTION DE ORDENES</a>
+                  <ul class="menu">
+                    <li><a href="#">Crear Orden de Producción</a></li>
+                    <li>
+                      <a href="#">Asignar Materiales a Ordenes de Trabajo</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">SOLICITUD DE MATERIALES</a>
+                  <ul class="menu">
+                    <li>
+                      <a href="#"
+                        >Registrar Solicitud de Materiales (Cantidad, Proveedor,
+                        Lote)</a
+                      >
+                    </li>
+                    <li><a href="#">Emitir Remito de Solicitud</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">ESTADO DE PRODUCCION</a>
+                  <ul class="menu">
+                    <li>
+                      <a href="#"
+                        >Registrar Finalización de Producción (Fecha, Turno,
+                        Hora)</a
+                      >
+                    </li>
+                    <li><a href="#">Confirmación de Producto Terminado</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">
+                <span class="las la-clipboard-check"></span>
+                <small>Reportes</small>
+              </a>
+              <ul class="submenu">
+                <li>
+                  <a href="#">INVENTARIO</a>
+                  <ul class="menu">
+                    <li>
+                      <a href="#">Informe de Stock Inicial de Materiales</a>
+                    </li>
+                    <li>
+                      <a href="#">Informe de Stock Final de Materiales</a>
+                    </li>
+                    <li><a href="#">Informe de Sobrantes de Materiales</a></li>
+                    <li>
+                      <a href="#">Informe de Disponibilidad de Materiales</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">INSUMOS</a>
+                  <ul class="menu">
+                    <li><a href="#">Informe de Stock Inicial de Insumos</a></li>
+                    <li><a href="#"> Informe de Stock Final de Insumos</a></li>
+                    <li><a href="#">Informe de Sobrantes de Insumos</a></li>
+                    <li>
+                      <a href="#">Informe de Disponibilidad de Insumos</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">RETENCION Y DESCARTES</a>
+                  <ul class="menu">
+                    <li>
+                      <a href="#"
+                        >Informe de Materiales Retenidos (Causa y Fecha)</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#"
+                        >Informe de Materiales Descartados (Causa y Fecha)</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#"
+                        >Informe de Insumos Descartados (Causa y Fecha)</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">
+                <span class="las la-exclamation-circle"></span>
+                <small>Eventos</small>
+              </a>
+              <ul class="submenu">
+                <li><a href="#">Submenú 1</a></li>
+                <li><a href="#">Submenú 2</a></li>
+                <li><a href="#">Submenú 3</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">
+                <span class="las la-user-alt"></span>
+                <small>Personal</small>
+              </a>
+              <ul class="submenu">
+                <li>
+                  <a href="#">Submenú 1</a>
+                  <ul class="submenu">
+                    <li><a href="#">Sub-submenú 1</a></li>
+                    <li><a href="#">Sub-submenú 2</a></li>
+                    <li><a href="#">Sub-submenú 3</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">Submenú 2</a>
+                  <ul class="submenu">
+                    <li><a href="#">Sub-submenú 1</a></li>
+                    <li><a href="#">Sub-submenú 2</a></li>
+                    <li><a href="#">Sub-submenú 3</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">Submenú 3</a>
+                  <ul class="submenu">
+                    <li><a href="#">Sub-submenú 1</a></li>
+                    <li><a href="#">Sub-submenú 2</a></li>
+                    <li><a href="#">Sub-submenú 3</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <a href="#">
+                <span class="las la-chart-line"></span>
+                <small>Gráficos</small>
+              </a>
+              <ul class="submenu">
+                <li><a href="#">Submenú 1</a></li>
+                <li><a href="#">Submenú 2</a></li>
+                <li><a href="#">Submenú 3</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">
+                <span class="las la-file-alt"></span>
+                <small>Órdenes</small>
+              </a>
+              <ul class="submenu">
+                <li><a href="#">Submenú 1</a></li>
+                <li><a href="#">Submenú 2</a></li>
+                <li><a href="#">Submenú 3</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">
+                <span class="las la-tasks"></span>
+                <small>Tareas</small>
+              </a>
+              <ul class="submenu">
+                <li><a href="#">Submenú 1</a></li>
+                <li><a href="#">Submenú 2</a></li>
+                <li><a href="#">Submenú 3</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">
+                <span class="las la-cog"></span>
+                <small>Configuración</small>
+              </a>
+              <ul class="submenu">
+                <li>
+                  <a href="#">USUARIOS</a>
+                  <ul class="menu">
+                    <li>
+                      <a href="#"
+                        >Gestión de Roles (Administrativo y General)</a
+                      >
+                    </li>
+                    <li><a href="#">Asignar Permisos</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">PREFERENCIAS DEL SISTEMA</a>
+                  <ul class="menu">
+                    <li><a href="#">Configuración de Notificaciones</a></li>
+                    <li><a href="#">Configuración de Idioma y Región</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="main-content">
+      <header>
+        <div class="header-content">
+          <label for="menu-toggle">
+            <span class="las la-bars"></span>
+          </label>
+
+          <div class="header-menu">
+            <label for="">
+              <span class="las la-search"></span>
+            </label>
+
+            <div class="notify-icon">
+              <span class="las la-envelope"></span>
+              <span class="notify">4</span>
+            </div>
+
+            <div class="notify-icon">
+              <span class="las la-bell"></span>
+              <span class="notify">3</span>
+            </div>
+
+            <div class="user">
+              <div
+                class="bg-img"
+                style="background-image: url(img/1.jpeg)"
+              ></div>
+
+              <span class="las la-power-off"></span>
+              <a href="login1.html">Logout</a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <div class="page-header">
+          <h1>Menú</h1>
+          <small>Inicio</small>
+        </div>
+
+        <div class="page-content">
+          <div class="analytics">
+            <div class="card">
+              <div class="card-head">
+                <h2>200</h2>
+                <span class="las la-signal"></span>
+              </div>
+              <div class="card-progress">
+                <small>Existencia Actual</small>
+                <div class="card-indicator">
+                  <div class="indicator one" style="width: 60%"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-head">
+                <h2>400</h2>
+                <span class="las la-shopping-bag"></span>
+              </div>
+              <div class="card-progress">
+                <small>Existencia Total</small>
+                <div class="card-indicator">
+                  <div class="indicator two" style="width: 80%"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-head">
+                <h2>250</h2>
+                <span class="las la-boxes"></span>
+              </div>
+              <div class="card-progress">
+                <small>Stock</small>
+                <div class="card-indicator">
+                  <div class="indicator three" style="width: 65%"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-head">
+                <h2>100</h2>
+                <span class="las la-undo-alt"></span>
+              </div>
+              <div class="card-progress">
+                <small>Devoluciones</small>
+                <div class="card-indicator">
+                  <div class="indicator four" style="width: 90%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <h1>Lista de Materiales</h1>
+          <br />
+
+          <div class="records table-responsive">
+            <div class="record-header">
+              <div class="add">
+                <span>Entradas</span>
+                <select name="" id="">
+                  <option value="">ID</option>
+                </select>
+                <button>Agregar registro</button>
+              </div>
+
+              <div class="browse">
+                <input
+                  type="search"
+                  placeholder="Search"
+                  class="record-search"
+                />
+                <select name="" id="">
+                  <option value="">Status</option>
+                </select>
+              </div>
+            </div>
+
+            <div>
+              <table width="100%">
+                <thead>
+                  <tr>
+                    <th><span class="las la-sort"></span>Codigo</th>
+                    <th><span class="las la-sort"></span>Descripcion</th>
+                    <th><span class="las la-sort"></span>Cantidad</th>
+                    <th><span class="las la-sort"></span>Categoria</th>
+                    <th><span class="las la-sort"></span>Almacen</th>
+                    <th><span class="las la-sort"></span>Stock Minimo</th>
+                    <th><span class="las la-sort"></span>Inventario</th>
+                    <th><span class="las la-sort"></span>Stock Solicitar</th>
+                    <th><span class="las la-sort"></span>ACTIONS</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <!-- <tr>
+                    <td>100</td>
+                    <td>Caramelo doble concentracion</td>
+                    <td>kg</td>
+                    <td>Dulces</td>
+                    <td>Almacen1</td>
+                    <td>50</td>
+                    <td>42</td>
+                    <td>Solicitar material</td>
+                    <td>
+                      <div class="actions">
+                        <span class="lab la-telegram-plane"></span>
+                        <span class="las la-eye"></span>
+                        <span class="las la-ellipsis-v"></span>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>101</td>
+                    <td>Caramelo de menta</td>
+                    <td>bolsa</td>
+                    <td>Dulces</td>
+                    <td>Almacen1</td>
+                    <td>5</td>
+                    <td>10</td>
+                    <td>Hay suficiente</td>
+                    <td>
+                      <div class="actions">
+                        <span class="lab la-telegram-plane"></span>
+                        <span class="las la-eye"></span>
+                        <span class="las la-ellipsis-v"></span>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>102</td>
+                    <td>Caramelo oscuro</td>
+                    <td>bolsa</td>
+                    <td>Dulces</td>
+                    <td>Almacen1</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>Sin dato stock minimo</td>
+                    <td>
+                      <div class="actions">
+                        <span class="lab la-telegram-plane"></span>
+                        <span class="las la-eye"></span>
+                        <span class="las la-ellipsis-v"></span>
+                      </div>
+                    </td>
+                  </tr> -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Nav desplegable-->
+
+    <script type="text/javascript">
+      $(".nav").click(function () {
+        $("#mySidenav").css("width", "70px");
+        $("#main").css("margin-left", "70px");
+        $(".logo").css("visibility", "hidden");
+        $(".logo span").css("visibility", "visible");
+        $(".logo span").css("margin-left", "-10px");
+        $(".icon-a").css("visibility", "hidden");
+        $(".icons").css("visibility", "visible");
+        $(".icons").css("margin-left", "-8px");
+        $(".nav").css("display", "none");
+        $(".nav2").css("display", "block");
+      });
+
+      $(".nav2").click(function () {
+        $("#mySidenav").css("width", "300px");
+        $("#main").css("margin-left", "300px");
+        $(".logo").css("visibility", "visible");
+        $(".logo span").css("visibility", "visible");
+        $(".icon-a").css("visibility", "visible");
+        $(".icons").css("visibility", "visible");
+        $(".nav").css("display", "block");
+        $(".nav2").css("display", "none");
+      });
+    </script>
+
+    <script>
+      function Get() {
+        fetch("http://localhost:61344/api/Almacen/ListarTodos")
+          .then((response) => response.json())
+          .then((data) => {
+            const tbody = document.querySelector(`tbody`);
+
+            data.forEach((o) => {
+              let _tr = `<tr>
+                            <td>${o.idMaterial}</td>
+                            <td>${o.Material}</td>
+                            <td>${o.Stock}</td>
+                        </tr>`;
+
+              tbody.innerHTML += _tr;
+            });
+          });
+      }
+      Get();
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const menuItems = document.querySelectorAll(".side-menu ul li a");
+
+        menuItems.forEach((item) => {
+          item.addEventListener("click", function (event) {
+            event.preventDefault();
+            const submenu = this.nextElementSibling;
+            const isActive = submenu && submenu.style.display === "block";
+
+            document
+              .querySelectorAll(".side-menu ul .submenu")
+              .forEach((sub) => {
+                sub.style.display = "none";
+              });
+
+            if (submenu && !isActive) {
+              submenu.style.display = "block";
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

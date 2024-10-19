@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Informe de Materiales Retenidos y Descartados</title>
+    <link rel="stylesheet" href="styless.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>Informe de Materiales Retenidos y Descartados</h1>
+
+      <!-- Selección de tipo de informe -->
+      <form id="reportForm">
+        <label for="reportType">Tipo de Informe:</label>
+        <select id="reportType" required>
+          <option value="" disabled selected>
+            Seleccione el tipo de informe
+          </option>
+          <option value="retenido">Materiales Retenidos</option>
+          <option value="descartado">Materiales Descartados</option>
+        </select>
+
+        <!-- Botón para generar el informe -->
+        <button type="submit">Generar Informe</button>
+      </form>
+
+      <!-- Tabla de resultados -->
+      <table id="reportTable" class="hidden">
+        <thead>
+          <tr>
+            <th>Nombre del Material</th>
+            <th>Causa de Retención/Descarte</th>
+            <th>Fecha de Retención/Descarte</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Datos de ejemplo -->
+          <tr>
+            <td>Pintura Acrílica</td>
+            <td>Daños por humedad</td>
+            <td>10/10/2024</td>
+          </tr>
+          <tr>
+            <td>Acero Inoxidable</td>
+            <td>Exceso de óxido</td>
+            <td>12/10/2024</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <script>
+      // Mostrar la tabla al hacer clic en "Generar Informe"
+      document
+        .getElementById("reportForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+          document.getElementById("reportTable").classList.remove("hidden");
+        });
+    </script>
+  </body>
+</html>

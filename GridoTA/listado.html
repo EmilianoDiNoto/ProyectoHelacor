@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estado de Existencias</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            max-width: 900px;
+            margin: auto;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        th,
+        td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f8f8f8;
+            color: #333;
+        }
+
+        .btn-group {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin-left: 10px;
+            border: none;
+            background-color: #007bff;
+            color: #fff;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Estado de Existencias</h1>
+
+        <input type="text" placeholder="Buscar producto...">
+
+        <h2>Existencias Asignadas</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Producto</th>
+                    <th>Stock Total</th>
+                    <th>Stock Asignado</th>
+                    <th>Stock Liberado</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Producto A</td>
+                    <td>100</td>
+                    <td>20</td>
+                    <td>80</td>
+                </tr>
+                <tr>
+                    <td>Producto B</td>
+                    <td>200</td>
+                    <td>50</td>
+                    <td>150</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>Existencias Liberadas</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Producto</th>
+                    <th>Stock Total</th>
+                    <th>Stock Asignado</th>
+                    <th>Stock Liberado</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Producto C</td>
+                    <td>300</td>
+                    <td>100</td>
+                    <td>200</td>
+                </tr>
+                <tr>
+                    <td>Producto D</td>
+                    <td>400</td>
+                    <td>120</td>
+                    <td>280</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="btn-group">
+            <button>Actualizar</button>
+            <button>Exportar</button>
+            <button>Volver</button>
+        </div>
+    </div>
+</body>
+
+</html>

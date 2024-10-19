@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Estructura de Producto</title>
+    <link rel="stylesheet" href="styless.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>Estructura de Producto</h1>
+      <div class="product-graph">
+        <ul>
+          <li>
+            <span class="product">Producto: Televisor</span>
+            <ul>
+              <li>
+                <span class="component">Componentes:</span>
+                <ul>
+                  <li>
+                    <span class="material">Pantalla LCD</span>
+                    <ul>
+                      <li><span class="sub-material">Vidrio</span></li>
+                      <li><span class="sub-material">Transistores</span></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <span class="material">Circuito Impreso</span>
+                    <ul>
+                      <li>
+                        <span class="sub-material">Chips Electrónicos</span>
+                      </li>
+                      <li><span class="sub-material">Resistencias</span></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <span class="material">Chasis de Plástico</span>
+                    <ul>
+                      <li><span class="sub-material">Polímeros</span></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
+
+<!-- 
+Explicación del Diseño:
+Estructura de Árbol: Se utiliza una estructura en árbol para representar la composición del producto, donde cada producto tiene componentes, y cada componente puede tener sub-materiales.
+
+Colores Diferenciados: Cada nivel de la estructura tiene un color diferente para distinguir fácilmente entre el producto, los componentes y los materiales:
+
+Producto principal en verde.
+Componentes en azul.
+Materiales en naranja.
+Sub-materiales en morado.
+Estilo de Árbol: El diseño usa líneas verticales y horizontales que conectan los diferentes elementos de la estructura del producto, simulando la representación gráfica de un grafo.
+
+Responsividad: La interfaz es minimalista y puede adaptarse fácilmente a diferentes tamaños de pantalla. -->

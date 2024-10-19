@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sistema Grido Tech Advance">
+    <link rel="shortcut icon" href="IMG/grido-icon.png" type="image/x-icon">
+    <title>G.T.A</title>
+
+    <!-- -------- CSS -------- -->
+    <link rel="stylesheet" href="/CSS/indexg_style.css">
+
+    <!-- -------- BOOTSTRAP CSS -------- -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+
+
+    <!-- -------- GOOGLE FONTS -------- -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="contenedor_grid">
+        <div class="cheader g1">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="logo_header col-md-6">
+                        <img src="IMG/HelacorSAA.png" class="img_logo" alt="logo_helacor">
+                    </div>
+                    <div class="logout_button col-md-6">
+                        <a class="logout_link" href="login1.html"><svg xmlns="http://www.w3.org/2000/svg" width="18"
+                                height="20" fill="currentColor" class="bi bi-box-arrow-right icon_exit"
+                                viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0z" />
+                                <path fill-rule="evenodd"
+                                    d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708z" />
+                            </svg></i> Cerrar Sesión</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="cnav g2">
+            <div class="container-fluid">
+                <p class="subtitle"> <b>G</b>rido <b>T</b>ech <b>A</b>dvance <b>S</b>ystem</p>
+            </div>
+        </div>
+
+
+        <div class="caside g3">
+            <div class="container row">
+                <div class="button_contenedor">
+                    <a class="bottom_nav" href="indexg.html">LISTADO</a>
+                </div>
+                <div class="button_contenedor">
+                    <a class="bottom_nav" href="putplus.html">AGREGAR</a>
+                </div>
+                <div class="button_contenedor">
+                    <a class="bottom_nav" href="putdev.html">DEVOLUCIONES</a>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="cmain g4">
+            <!-- <p>este es el main</p> -->
+            <div class="container-fluid">
+                <div class="container contendor_int">
+                    <h2 class="tittle_met">TABLA</h2>
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th class="th_tittle" scope="col">ID Materia</th>
+                                <th class="th_tittle" scope="col">Nombre</th>
+                                <th class="th_tittle" scope="col">Stock</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- aca va el contenido de la tabla -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="cfooter g5">
+            <div class="container">
+                <div class="row">
+                    <div class="empresas">
+                        <h4 class="empresas_nm">Institución Cervantes - Helacor S.A ©</h4>
+                        <p class="devs">Di Noto, Gonzalez, Córdoba, Roure, Zavaleta, Ríos</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- -------- BOOTSTRAP JS -------- -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+
+<script>
+
+function Get() {
+
+fetch('http://localhost:61344/api/Almacen/ListarTodos')
+    .then((response) => response.json())
+    .then(data => {
+
+
+        const tbody = document.querySelector(`tbody`);
+
+        data.forEach(o => {
+            let _tr = `<tr>
+                            <td>${o.idMaterial}</td>
+                            <td>${o.Material}</td>
+                            <td>${o.Stock}</td>
+                        </tr>`
+
+            tbody.innerHTML += _tr;
+        });
+    });
+}
+Get();
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gestión de Materiales e Insumos</title>
+    <link rel="stylesheet" href="styless.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>Gestión de Materiales e Insumos</h1>
+
+      <form id="materialManagementForm">
+        <!-- Dropdown to select type of record -->
+        <label for="recordType">Tipo de Registro:</label>
+        <select id="recordType" required>
+          <option value="" disabled selected>
+            Seleccione el tipo de registro
+          </option>
+          <option value="remito">Registrar Remito de Solicitud</option>
+          <option value="stockInicialMateriaPrima">
+            Stock Inicial de Materia Prima
+          </option>
+          <option value="stockInicialInsumos">Stock Inicial de Insumos</option>
+          <option value="stockFinalMateriaPrima">
+            Stock Final de Materia Prima
+          </option>
+          <option value="stockFinalInsumos">Stock Final de Insumos</option>
+          <option value="devolucionesMateriales">
+            Devoluciones de Materiales
+          </option>
+          <option value="materialDescartado">Material Descartado</option>
+          <option value="materialRetenido">Material Retenido</option>
+          <option value="insumoDescartado">Insumos Descartados</option>
+          <option value="insumoRetenido">Insumos Retenidos</option>
+        </select>
+
+        <!-- Common input fields -->
+        <label for="materialName">Nombre del Material/Insumo:</label>
+        <input
+          type="text"
+          id="materialName"
+          placeholder="Ingrese el nombre del material"
+          required
+        />
+
+        <label for="quantity">Cantidad:</label>
+        <input
+          type="number"
+          id="quantity"
+          placeholder="Ingrese la cantidad"
+          required
+        />
+
+        <label for="provider">Proveedor:</label>
+        <input
+          type="text"
+          id="provider"
+          placeholder="Ingrese el nombre del proveedor"
+          required
+        />
+
+        <label for="batchNumber">Número de Lote:</label>
+        <input
+          type="text"
+          id="batchNumber"
+          placeholder="Ingrese el número de lote"
+          required
+        />
+
+        <label for="description">Descripción:</label>
+        <textarea
+          id="description"
+          placeholder="Escriba una breve descripción"
+          required
+        ></textarea>
+
+        <!-- Submit button -->
+        <button type="submit">Registrar</button>
+      </form>
+    </div>
+  </body>
+</html>
+
+<!-- 
+Explicación del Diseño:
+Formulario Unificado: Este formulario permite realizar diferentes tipos de registros (remitos, stock inicial y final, devoluciones, descartes, etc.) en una única interfaz, seleccionando el tipo de registro desde un menú desplegable.
+
+Campos Comunes:
+
+Nombre del Material/Insumo: Campo de texto para ingresar el nombre del material o insumo que se va a registrar.
+Cantidad: Campo numérico para especificar la cantidad.
+Proveedor: Campo de texto para ingresar el nombre del proveedor.
+Número de Lote: Campo de texto para ingresar el número de lote asociado al material.
+Descripción: Un área de texto para proporcionar información adicional sobre el registro.
+Selección de Tipo de Registro: El menú desplegable permite seleccionar qué tipo de registro se va a realizar (remito, stock inicial, stock final, devoluciones, etc.), lo que facilita el uso del formulario para múltiples procesos.
+
+Botón de Registro: El botón de "Registrar" realiza la acción de guardar los datos ingresados, con interactividad visual (cambio de color al pasar el cursor).
+
+Diseño Responsivo: Este diseño es limpio, funcional y se adapta a diferentes tamaños de pantalla, lo que lo hace accesible tanto en dispositivos móviles como en pantallas de escritorio. -->

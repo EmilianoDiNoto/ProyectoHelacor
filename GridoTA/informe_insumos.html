@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Informe de Insumos</title>
+    <link rel="stylesheet" href="informe_insumos.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Emitir Informe de Insumos</h1>
+
+      <!-- Informe de Insumos Retenidos -->
+      <div class="form-section">
+        <h2>Informe de Insumos Retenidos</h2>
+        <form id="form-retenidos">
+          <label for="causa-retenidos">Causa de Retención:</label>
+          <input
+            type="text"
+            id="causa-retenidos"
+            name="causa-retenidos"
+            required
+          />
+
+          <label for="fecha-retenidos">Fecha de Retención:</label>
+          <input
+            type="date"
+            id="fecha-retenidos"
+            name="fecha-retenidos"
+            required
+          />
+
+          <button type="submit">Generar Informe</button>
+        </form>
+      </div>
+
+      <!-- Informe de Insumos Descartados -->
+      <div class="form-section">
+        <h2>Informe de Insumos Descartados</h2>
+        <form id="form-descartados">
+          <label for="causa-descartados">Causa de Descarte:</label>
+          <input
+            type="text"
+            id="causa-descartados"
+            name="causa-descartados"
+            required
+          />
+
+          <label for="fecha-descartados">Fecha de Descarte:</label>
+          <input
+            type="date"
+            id="fecha-descartados"
+            name="fecha-descartados"
+            required
+          />
+
+          <button type="submit">Generar Informe</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
