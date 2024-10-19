@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro Resumido de Componentes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            max-width: 900px;
+            margin: auto;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        select,
+        input[type="date"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        th,
+        td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f8f8f8;
+            color: #333;
+        }
+
+        .btn-group {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin-left: 10px;
+            border: none;
+            background-color: #007bff;
+            color: #fff;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .btn-danger {
+            background-color: #dc3545;
+        }
+
+        .btn-danger:hover {
+            background-color: #c82333;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Registro Resumido de Componentes</h1>
+
+        <label for="order">Orden de Producción:</label>
+        <select id="order">
+            <option>Seleccione una orden</option>
+            <option>Orden 001</option>
+            <option>Orden 002</option>
+        </select>
+
+        <label for="recipe">Receta:</label>
+        <select id="recipe">
+            <option>Seleccione una receta</option>
+            <option>Receta A</option>
+            <option>Receta B</option>
+        </select>
+
+        <label for="date">Fecha de Producción:</label>
+        <input type="date" id="date">
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Componente</th>
+                    <th>Cantidad Necesaria</th>
+                    <th>Stock Disponible</th>
+                    <th>Stock Asignado</th>
+                    <th>Observaciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Componente A</td>
+                    <td>10</td>
+                    <td>15</td>
+                    <td>5</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Componente B</td>
+                    <td>20</td>
+                    <td>25</td>
+                    <td>10</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="btn-group">
+            <button>Generar Resumen</button>
+            <button>Descargar PDF</button>
+            <button class="btn-danger">Cancelar</button>
+        </div>
+    </div>
+</body>
+
+</html>

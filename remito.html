@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gestión de Remitos de Materiales</title>
+    <link rel="stylesheet" href="styless.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>Gestión de Remitos de Solicitud de Materiales</h1>
+
+      <form id="materialRequestForm">
+        <!-- Nombre del Material -->
+        <label for="materialName">Nombre del Material:</label>
+        <input
+          type="text"
+          id="materialName"
+          placeholder="Ingrese el nombre del material"
+          required
+        />
+
+        <!-- Cantidad -->
+        <label for="quantity">Cantidad:</label>
+        <input
+          type="number"
+          id="quantity"
+          placeholder="Ingrese la cantidad"
+          required
+        />
+
+        <!-- Proveedor -->
+        <label for="provider">Proveedor:</label>
+        <input
+          type="text"
+          id="provider"
+          placeholder="Ingrese el nombre del proveedor"
+          required
+        />
+
+        <!-- Número de Lote -->
+        <label for="batchNumber">Número de Lote:</label>
+        <input
+          type="text"
+          id="batchNumber"
+          placeholder="Ingrese el número de lote"
+          required
+        />
+
+        <!-- Descripción -->
+        <label for="description">Descripción:</label>
+        <textarea
+          id="description"
+          placeholder="Escriba una breve descripción"
+          required
+        ></textarea>
+
+        <!-- Botón de Emitir Remito -->
+        <button type="submit">Registrar Remito</button>
+      </form>
+    </div>
+  </body>
+</html>
+
+<!-- Explicación:
+Estructura Unificada: Ambas secciones de registro y emisión de remitos se han unificado en un solo formulario, evitando duplicación de elementos.
+
+Campos Comunes: Todos los campos importantes (nombre del material, cantidad, proveedor, número de lote y descripción) están presentes una sola vez.
+
+Título General: El título del formulario se ha generalizado como "Gestión de Remitos de Solicitud de Materiales", ya que ambos casos hacen referencia a la misma funcionalidad esencial.
+
+Interfaz Minimalista: El diseño mantiene un enfoque simple y funcional con CSS limpio y claro, adaptable a diferentes pantallas. -->

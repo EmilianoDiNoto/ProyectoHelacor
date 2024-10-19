@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Estructura de Producto</title>
+    <link rel="stylesheet" href="styless.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>Estructura de Producto</h1>
+
+      <!-- Product Structure Window -->
+      <div class="product-structure">
+        <div class="product">
+          <h2>Producto: Computadora Portátil</h2>
+          <ul>
+            <li>
+              <span class="expand-btn">▶</span>
+              <strong>Componente: Pantalla</strong>
+              <ul class="sub-items hidden">
+                <li>Insumo: Cristal LCD</li>
+                <li>Insumo: Marco de Plástico</li>
+                <li>Insumo: Panel Táctil</li>
+              </ul>
+            </li>
+            <li>
+              <span class="expand-btn">▶</span>
+              <strong>Componente: Placa Base</strong>
+              <ul class="sub-items hidden">
+                <li>Insumo: Procesador</li>
+                <li>Insumo: Memoria RAM</li>
+                <li>Insumo: Unidad de Almacenamiento (SSD)</li>
+              </ul>
+            </li>
+            <li>
+              <span class="expand-btn">▶</span>
+              <strong>Componente: Batería</strong>
+              <ul class="sub-items hidden">
+                <li>Insumo: Celdas de Litio</li>
+                <li>Insumo: Controlador de Carga</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // JavaScript to toggle sub-items
+      document.querySelectorAll(".expand-btn").forEach((button) => {
+        button.addEventListener("click", () => {
+          const subItems = button.nextElementSibling.nextElementSibling;
+          if (subItems.classList.contains("hidden")) {
+            subItems.classList.remove("hidden");
+            button.textContent = "▼";
+          } else {
+            subItems.classList.add("hidden");
+            button.textContent = "▶";
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
+
+<!-- Explicación del Diseño:
+Ventana Interactiva: Se utiliza una estructura de lista que permite al usuario expandir o colapsar los componentes de un producto. Cada componente tiene insumos y materiales que se pueden visualizar de manera jerárquica.
+
+Botón de Expansión: Se implementa un botón con un símbolo (▶ para expandir y ▼ para colapsar) que permite al usuario mostrar u ocultar los insumos y materiales dentro de cada componente.
+
+Colores:
+
+Los componentes del producto están resaltados en azul.
+El nombre del producto principal está en verde.
+Los botones de expansión son de color azul claro y cambian a azul oscuro al pasar el cursor por encima para resaltar la interactividad.
+Responsividad: El diseño es flexible y puede adaptarse a diferentes tamaños de pantalla.
+
+Interactividad: La funcionalidad de expansión y colapso de las sublistas se controla con un sencillo script en JavaScript que alterna entre mostrar y ocultar las listas de insumos.
+ -->

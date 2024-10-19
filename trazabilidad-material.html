@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Generar Trazabilidad de Materiales</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Trazabilidad de Materiales e Insumos</h1>
+    </header>
+    <main>
+      <section class="search-section">
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Buscar material o insumo..."
+          onkeyup="filterTable()"
+        />
+      </section>
+      <section class="table-section">
+        <table id="traceabilityTable">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Material/Insumo</th>
+              <th>Fecha de Entrada</th>
+              <th>Fecha de Salida/ Uso</th>
+              <th>Historial</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Aquí se agregarán las filas de la tabla -->
+          </tbody>
+        </table>
+      </section>
+      <section class="form-section">
+        <h2>Añadir Nuevo Registro</h2>
+        <form id="addForm" onsubmit="addRecord(event)">
+          <label for="material">Material/Insumo:</label>
+          <input type="text" id="material" name="material" required />
+
+          <label for="entryDate">Fecha de Entrada:</label>
+          <input type="date" id="entryDate" name="entryDate" required />
+
+          <label for="exitDate">Fecha de Salida/Uso:</label>
+          <input type="date" id="exitDate" name="exitDate" required />
+
+          <label for="history">Historial:</label>
+          <textarea id="history" name="history" required></textarea>
+
+          <button type="submit">Añadir Registro</button>
+        </form>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Emitir Informes de Stock y Disponibilidad</title>
+    <link rel="stylesheet" href="styless.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>Emitir Informes de Stock y Disponibilidad</h1>
+
+      <form id="reportForm">
+        <!-- Selección de tipo de informe -->
+        <label for="reportType">Tipo de Informe:</label>
+        <select id="reportType" required>
+          <option value="" disabled selected>
+            Seleccione el tipo de informe
+          </option>
+          <option value="stockInicialMaterial">
+            Stock Inicial de Material
+          </option>
+          <option value="stockInicialInsumos">Stock Inicial de Insumos</option>
+          <option value="sobrantesMaterial">Sobrantes de Material</option>
+          <option value="sobrantesInsumos">Sobrantes de Insumos</option>
+          <option value="disponibilidadMaterial">
+            Disponibilidad de Material
+          </option>
+          <option value="disponibilidadInsumos">
+            Disponibilidad de Insumos
+          </option>
+        </select>
+
+        <!-- Botón para generar informe -->
+        <button type="submit">Generar Informe</button>
+      </form>
+
+      <!-- Resultado del informe -->
+      <div id="reportResult" class="report-result hidden">
+        <h2>Resultado del Informe</h2>
+        <p>
+          Aquí se mostrará el informe generado según la selección realizada.
+        </p>
+      </div>
+    </div>
+
+    <script>
+      // Simulación de mostrar el informe al hacer clic en "Generar Informe"
+      document
+        .getElementById("reportForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+          document.getElementById("reportResult").classList.remove("hidden");
+        });
+    </script>
+  </body>
+</html>
+
+<!-- Explicación del Diseño:
+Formulario de Selección de Informe:
+
+Tipo de Informe: Se utiliza un menú desplegable que permite al usuario seleccionar el tipo de informe que desea generar, como stock inicial, sobrantes o disponibilidad, tanto para materiales como para insumos.
+Botón de Generar Informe: El botón "Generar Informe" permite al usuario emitir el informe seleccionado. Al hacer clic en él, se simula la aparición del resultado del informe.
+
+Resultado del Informe:
+
+Una vez que se genera el informe (simulado en este ejemplo), se muestra un contenedor con el título "Resultado del Informe" y un mensaje que indicará que el informe fue generado.
+Diseño Responsivo: El diseño está pensado para adaptarse a diferentes tamaños de pantalla, con un layout limpio y claro que asegura una buena experiencia tanto en móviles como en pantallas más grandes.
+
+Interactividad: Se incluye un pequeño script en JavaScript que simula la generación del informe al presionar el botón, haciendo aparecer el bloque de resultados. -->

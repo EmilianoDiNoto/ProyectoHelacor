@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inventario Actual</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Inventario Actual</h1>
+    </header>
+    <main>
+      <section class="search-section">
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Buscar en el inventario..."
+          onkeyup="filterTable()"
+        />
+      </section>
+      <section class="table-section">
+        <table id="inventoryTable">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Nombre del Artículo</th>
+              <th>Cantidad</th>
+              <th>Estado</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Aquí se agregarán las filas de la tabla -->
+          </tbody>
+        </table>
+      </section>
+      <section class="form-section">
+        <h2>Añadir Nuevo Artículo</h2>
+        <form id="addForm" onsubmit="addRecord(event)">
+          <label for="itemName">Nombre del Artículo:</label>
+          <input type="text" id="itemName" name="itemName" required />
+
+          <label for="quantity">Cantidad:</label>
+          <input type="number" id="quantity" name="quantity" required />
+
+          <label for="status">Estado:</label>
+          <select id="status" name="status" required>
+            <option value="Disponible">Disponible</option>
+            <option value="Reservado">Reservado</option>
+            <option value="Agotado">Agotado</option>
+          </select>
+
+          <button type="submit">Añadir Artículo</button>
+        </form>
+      </section>
+      <section class="generate-section">
+        <button id="generateImageBtn" onclick="generateImage()">
+          Generar Imagen del Inventario
+        </button>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

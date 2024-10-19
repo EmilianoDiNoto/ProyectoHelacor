@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clasificación de Materiales e Insumos</title>
+    <link rel="stylesheet" href="styless.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>Clasificación de Estados de Materiales e Insumos</h1>
+      <form id="classificationForm">
+        <label for="materialName">Nombre del Material o Insumo:</label>
+        <input
+          type="text"
+          id="materialName"
+          placeholder="Escribe el nombre del material"
+        />
+
+        <label for="materialStatus">Estado del Material:</label>
+        <select id="materialStatus">
+          <option value="disponible">Disponible</option>
+          <option value="noDisponible">No Disponible</option>
+          <option value="cuarentena">En Cuarentena</option>
+          <option value="danado">Dañado</option>
+          <option value="devuelto">Devuelto</option>
+        </select>
+
+        <label for="description">Descripción:</label>
+        <textarea
+          id="description"
+          placeholder="Añade una descripción del estado del material"
+        ></textarea>
+
+        <button type="submit">Guardar Clasificación</button>
+      </form>
+    </div>
+  </body>
+</html>
+
+<!-- Explicación del Diseño:
+Formulario: Permite ingresar el nombre del material, seleccionar su estado (disponible, no disponible, en cuarentena, etc.) y proporcionar una descripción opcional del estado.
+Select Dropdown: Muestra las diferentes opciones de estado que pueden ser seleccionadas.
+Botón de Guardar: Al presionar el botón "Guardar Clasificación", el formulario enviaría los datos para su almacenamiento o procesamiento. -->

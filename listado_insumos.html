@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listado de Insumos y Materiales</title>
+    <link rel="stylesheet" href="listado_insumos.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Listados de Órdenes de Trabajo</h1>
+
+        <!-- Listado de Insumos Asignados -->
+        <div class="form-section">
+            <h2>Listado de Insumos Asignados a una Orden de Trabajo</h2>
+            <form id="form-insumos">
+                <label for="orden-insumos">Número de Orden de Trabajo:</label>
+                <input type="text" id="orden-insumos" name="orden-insumos" required>
+
+                <label for="fecha-insumos">Fecha de Asignación:</label>
+                <input type="date" id="fecha-insumos" name="fecha-insumos" required>
+
+                <button type="submit">Emitir Listado de Insumos</button>
+            </form>
+        </div>
+
+        <!-- Listado de Materiales Asignados -->
+        <div class="form-section">
+            <h2>Listado de Materiales Asignados a una Orden de Trabajo</h2>
+            <form id="form-materiales">
+                <label for="orden-materiales">Número de Orden de Trabajo:</label>
+                <input type="text" id="orden-materiales" name="orden-materiales" required>
+
+                <label for="fecha-materiales">Fecha de Asignación:</label>
+                <input type="date" id="fecha-materiales" name="fecha-materiales" required>
+
+                <button type="submit">Emitir Listado de Materiales</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

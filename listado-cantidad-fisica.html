@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Listado de Material Disponible en el Almacén</title>
+    <link rel="stylesheet" href="styless.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>Listado de Material Disponible en el Almacén</h1>
+
+      <!-- Botón para generar el listado -->
+      <button id="generateListButton">Generar Listado</button>
+
+      <!-- Tabla de resultados -->
+      <table id="materialTable" class="hidden">
+        <thead>
+          <tr>
+            <th>Nombre del Material</th>
+            <th>Cantidad Disponible</th>
+            <th>Ubicación</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Aquí se insertarán dinámicamente las filas con los datos -->
+          <tr>
+            <td>Acero Inoxidable</td>
+            <td>120</td>
+            <td>Almacén 1 - Sección A</td>
+          </tr>
+          <tr>
+            <td>Pintura Acrílica</td>
+            <td>85</td>
+            <td>Almacén 2 - Sección C</td>
+          </tr>
+          <tr>
+            <td>Cables de Cobre</td>
+            <td>200</td>
+            <td>Almacén 3 - Sección B</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <script>
+      // Simular la aparición de la tabla al hacer clic en "Generar Listado"
+      document
+        .getElementById("generateListButton")
+        .addEventListener("click", function () {
+          document.getElementById("materialTable").classList.remove("hidden");
+        });
+    </script>
+  </body>
+</html>
+
+<!-- Explicación del Diseño:
+Formulario para Generar el Listado:
+
+Un botón con el texto "Generar Listado" que permite al usuario mostrar la tabla con los datos del inventario de materiales disponibles en el almacén.
+Tabla de Materiales:
+
+La tabla tiene tres columnas: Nombre del Material, Cantidad Disponible, y Ubicación en el Almacén.
+Los datos de ejemplo (materiales, cantidades y ubicaciones) están precargados, pero podrían llenarse dinámicamente desde una base de datos en una implementación real.
+Interactividad:
+
+Se incluye un pequeño script en JavaScript que hace que la tabla aparezca cuando el usuario presiona el botón "Generar Listado". La tabla está oculta por defecto con la clase hidden.
+Estilo Visual:
+
+La tabla y los elementos están diseñados para ser limpios y fácilmente legibles, con colores alternados en las filas (nth-child(even)) para mejorar la legibilidad.
+Los botones y tablas tienen un diseño responsivo y agradable, con un aspecto moderno que se adapta bien a diferentes pantallas. -->
