@@ -7,7 +7,7 @@ using System.Web;
 
 namespace WebApplication.ApiAdo.Models
 {
-    public class MovimientoMaterial
+    public class ProductionOrders
     {
         #region Atributo
 
@@ -28,29 +28,16 @@ namespace WebApplication.ApiAdo.Models
 
         #region Propiedades
 
-        public int id_movimiento { get; set; }
+        public int OrderID { get; set; }
 
 
-        public int idMaterial { get; set; }
+        public string ProductName { get; set; }
 
-        public string Material { get; set; }
+        public DateTime Date { get; set; }
 
-        public DateTime fecha_movimiento { get; set; }
+        public string Status { get; set; }
 
-        public string estado_anterior { get; set; }
-
-        public string estado_nuevo { get; set; }
-
-        public int cantidad { get; set; }
-
-        public string tipo_movimiento { get; set; }
-
-        public string usuario { get; set; }
-
-        public string comentario { get; set; }
-
-
-
+        
         #endregion
 
         #region Metodos
@@ -88,14 +75,14 @@ namespace WebApplication.ApiAdo.Models
             SqlCommand sqlCom = new SqlCommand(sqlSentencia, sqlCnn);
             sqlCom.CommandType = CommandType.StoredProcedure;
             sqlCom.Parameters.Add("@idMaterial", SqlDbType.NVarChar).Value = idMaterial;
-            
+
             sqlCom.Parameters.Add("@EstadoAnterior", SqlDbType.NVarChar).Value = estado_anterior;
             sqlCom.Parameters.Add("@EstadoNuevo", SqlDbType.NVarChar).Value = estado_nuevo;
             sqlCom.Parameters.Add("@cantidad", SqlDbType.Int).Value = cantidad;
             sqlCom.Parameters.Add("@tipoMovimiento", SqlDbType.NVarChar).Value = tipo_movimiento;
             sqlCom.Parameters.Add("@usuario", SqlDbType.NVarChar).Value = usuario;
             sqlCom.Parameters.Add("@comentarios", SqlDbType.NVarChar).Value = comentario;
-            
+
             sqlCnn.Open();
 
             var res = sqlCom.ExecuteNonQuery();
@@ -122,7 +109,7 @@ namespace WebApplication.ApiAdo.Models
             sqlCom.Parameters.Add("@tipoMovimiento", SqlDbType.NVarChar).Value = tipo_movimiento;
             sqlCom.Parameters.Add("@usuario", SqlDbType.NVarChar).Value = usuario;
             sqlCom.Parameters.Add("@comentarios", SqlDbType.NVarChar).Value = comentario;
-           
+
 
             sqlCnn.Open();
 
@@ -135,6 +122,10 @@ namespace WebApplication.ApiAdo.Models
 
 
         #endregion
+
+
+
+
 
     }
 }

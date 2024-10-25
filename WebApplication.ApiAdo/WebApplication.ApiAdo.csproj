@@ -189,6 +189,7 @@
     <Compile Include="Models\Almacen.cs" />
     <Compile Include="Models\Material.cs" />
     <Compile Include="Models\MovimientoMaterial.cs" />
+    <Compile Include="Models\ProductionOrders.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
